@@ -39,4 +39,18 @@ All model credits are visible on detail pages, in the 3D viewer, and in `dist/cr
 
 ## Hosting
 
+### GitHub Pages from the main branch
+
+The root `index.html` opens the showroom in `dist/`. The `.nojekyll` file makes GitHub serve the existing static files directly.
+
+Enable hosting once in [Settings → Pages](https://github.com/yis4u/Car/settings/pages):
+
+1. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+2. Select **main** and **/ (root)**, then click **Save**.
+3. Wait for the Pages deployment to finish, then open **https://yis4u.github.io/Car/**.
+
+Future pushes to `main` publish automatically after Pages is enabled. The repository's Code tab displays the source files; GitHub Pages displays the running website.
+
+### Other static hosts
+
 Deploy the contents of `dist/` to a static host. `.openai/hosting.json` holds the identity and output-directory settings for the accompanying private Sites deployment. All application asset links are relative, so subdirectory hosting is supported. No environment variables or secrets are required.
